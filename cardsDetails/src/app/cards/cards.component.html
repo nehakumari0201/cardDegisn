@@ -1,26 +1,149 @@
-<p>cards works!</p>
-<p>cardsdesign works!</p>
 
 <div class="container">
   <div class="content">
     <mat-card>
       <mat-card-subtitle>Candidate Details</mat-card-subtitle>
       <hr>
-      <div>
+      <div *ngFor="let detail of details" class="flex1">
         <div>
           <p>Email</p>
-          <!-- <p> {{ detail.candidate[0].email }}</p> -->
+          <p>{{detail.candidate[0].email}}</p>
+        </div>
+        <div>
+          <p>Phone</p>
+          <p>{{detail.candidate[0].mobile}}</p>
+        </div>
+        <div>
+          <p>Employeer</p>
+          <p>{{detail.candidate[0].prev_emp}}</p>
+        </div>
+        <div style="margin-right: 4%;">
+          <p>job Status</p>
+          <p>{{detail.candidate[0].job_status}}</p>
+        </div>
+        <div>
+         <p>Current Ctc</p>
+         <p>{{detail.candidate[0].current_ctc}}</p>
+        </div>
+        <div>
+          <p> Notice_Periods</p>
+          <p>{{detail.candidate[0].notice_period}}</p>
+        </div>
+        <div>
+          <p> Year_of_experince</p>
+          <p>{{detail.candidate[0].year_of_exp}}</p>
+        </div>
+        <div>
+          <p> Technologies</p>
+          <p>{{detail.candidate[0].technologies}}</p>
+        </div>
+        <div style="margin-right: 4%;">
+          <p>Avtar
+          </p>
+          <p>{{detail.candidate[0].avtar}}</p>
+        </div>
+        <div>
+          <p>
+            Resume
+          </p>
+          <p>
+            {{detail.candidate[0].resume}}
+          </p>
         </div>
       </div>
     </mat-card>
     <div class="flex">
       <mat-card style="width:25%;margin-right: 2%;">
-
+        <mat-card-subtitle>Created By</mat-card-subtitle>
+        <hr>
+        <div *ngFor="let detail of details">
+          <p> FullName</p>
+         <p> {{detail.created_by[0].fullname}}</p>
+        </div>
+        <mat-card-subtitle>Rounds</mat-card-subtitle>
+        <hr>
+        <div *ngFor="let detail of details">
+         <div>
+           <p>id</p>
+           <p>{{detail.rounds[0].id}}</p>
+         </div>
+         <div>
+         <p>Name</p>
+         <p>{{detail.rounds[0].name}}
+        </p>
+         </div>
+         <div>
+         <p>Status</p>
+         <p>{{detail.rounds[0].status}}
+        </p>
+         </div>
+         <div>
+          <p>id</p>
+          <p>{{detail.rounds[1].id}}</p>
+        </div>
+        <div>
+          <p>Name</p>
+          <p>{{detail.rounds[1].name}}
+         </p>
+          </div>
+          <div>
+          <p>Status</p>
+          <p>{{detail.rounds[1].status}}
+         </p>
+          </div>
+        </div>
       </mat-card>
       <mat-card style="width:25% ;margin-right: 2%;">
-
+        <mat-card-subtitle>Client</mat-card-subtitle>
+        <hr>
+       <div *ngFor="let detail of details">
+         <div>
+          <p> logo</p>
+          <p>{{detail.client[0].logo}}</p>
+         </div>
+         <div>
+           <p> Name</p>
+           <p>{{detail.client[0].name}}</p>
+         </div>
+         <div>
+           <p>Link</p>
+           <p>{{detail.client[0].link}}</p>
+         </div>
+        </div>
       </mat-card>
       <mat-card style="width:46%">
+        <mat-card-subtitle>Interview Details</mat-card-subtitle>
+        <hr>
+        <div  *ngFor="let detail of details">
+          <mat-card class="color">
+           <p> Applied_Position</p>
+           <p>{{detail.interview[0].applied_position}}</p>
+          </mat-card>
+          <mat-card class="color">
+           <p>Excepted Salary</p>
+           <p>{{detail.interview[0].e_ctc}}</p>
+          </mat-card>
+          <mat-card class="color">
+          <p> Created_at</p>
+          <p>{{detail.interview[0].created_at}}</p>
+          </mat-card>
+          <mat-card class="color">
+          <p>job Status</p>
+          <p>{{detail.interview[0].updated_at}}</p>
+          </mat-card>
+          <mat-card class="color">
+          <p>Status</p>
+          <p>{{detail.interview[0].status}}</p>
+          </mat-card>
+          <mat-card class="color">
+          <p>Comission_Type</p>
+          <p>{{detail.interview[0].comission_type}}</p>
+          </mat-card>
+          <mat-card class="color">
+          <p> Comission</p>
+          <p> {{detail.interview[0].comission}}</p>
+          </mat-card>
+        </div>
 
       </mat-card>
     </div>

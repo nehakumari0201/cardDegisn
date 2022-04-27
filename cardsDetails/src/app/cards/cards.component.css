@@ -4,7 +4,7 @@
   height: 100vh;
 }
 .content{
-  width:90%;
+  width:96%;
   margin: auto;margin-top: 5%;
 }
 
@@ -15,4 +15,22 @@
 }
 mat-card{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.flex1{
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex1>div{
+  width:18%;
+}
+ p
+{
+  font-weight:500;
+}
+.color
+{
+  background-color: rgb(240, 238, 238);
+  margin-bottom: 2%;
+  display: flex;
+  justify-content:space-around;
 }
